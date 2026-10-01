@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://michaelmwangiwaweru.github.io/jengabet/">🌐 Live Demo</a>
+  
   &nbsp; • &nbsp;
   <a href="https://github.com/michaelmwangiwaweru/jengabet">💻 GitHub Repository</a>
 </p>
@@ -106,7 +106,6 @@ The project is deployed using GitHub Pages.
 
 ### 👉 Visit the live website
 
-**https://michaelmwangiwaweru.github.io/jengabet/**
 
 ---
 
