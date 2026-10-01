@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-id="th-modified">Jenga Bets - Sports Betting</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .nav-active { 
+      background-color: #22c55e; 
+      color: white; 
+      border-radius: 9999px;
+    }
+    .card-hover:hover { 
+      transform: translateY(-4px); 
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s; 
+    }
+    .tab-active {
+      border-bottom: 4px solid #22c55e;
+      color: #22c55e;
+      font-weight: 600;
+    }
+  </style>
+<meta property="og:title" content="Jenga Bets - Sports Betting" data-id="th-modified" ><meta name="description" content="Collection of Documents" data-id="th-modified" ><meta property="og:description" content="Collection of Documents" data-id="th-modified" ><meta property="og:image" content="https://tiiny.host/assets/logo-purple-bg.png" data-id="th-modified" ><meta property="og:url" content="https://jengabets-demo.tiiny.site/" data-id="th-modified" ><meta property="og:type" content="website" data-id="th-modified" ><script defer data-domain="jengabets-demo.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script></head>
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- Top Navigation -->
+  <nav class="bg-[#0a1428] border-b border-gray-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <span class="text-3xl font-bold text-green-500">JENGA</span>
+          <span class="text-3xl font-bold">BETS</span>
+        </div>
+
+        <!-- Main Menu -->
+        <div class="hidden md:flex items-center gap-2 bg-[#1a2338] rounded-full px-2 py-1">
+          <button onclick="setActive(this)" class="nav-active px-6 py-2 text-sm font-medium flex items-center gap-2">
+            <i class="fas fa-home"></i> Home
+          </button>
+          <button onclick="setActive(this)" class="px-6 py-2 text-sm font-medium flex items-center gap-2 hover:bg-gray-700 transition">
+            <i class="fas fa-bolt"></i> Live
+          </button>
+          <button onclick="setActive(this)" class="px-6 py-2 text-sm font-medium flex items-center gap-2 hover:bg-gray-700 transition">
+            <i class="fas fa-plane"></i> Aviator
+          </button>
+          <button onclick="setActive(this)" class="px-6 py-2 text-sm font-medium flex items-center gap-2 hover:bg-gray-700 transition">
+            <i class="fas fa-dice"></i> Crash
+          </button>
+          <button onclick="setActive(this)" class="px-6 py-2 text-sm font-medium flex items-center gap-2 hover:bg-gray-700 transition">
+            <i class="fas fa-trophy"></i> League
+          </button>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="bg-green-500 hover:bg-green-600 text-black font-semibold px-6 py-2.5 rounded-full text-sm transition">
+            Login
+          </button>
+          <button class="border border-green-500 hover:bg-green-500 hover:text-black text-green-500 font-semibold px-6 py-2.5 rounded-full text-sm transition">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto flex gap-6 px-4 py-6">
+
+    <!-- Sidebar -->
+    <div class="w-64 hidden lg:block space-y-8">
+      <!-- Search -->
+      <div class="bg-[#1a2338] rounded-2xl p-4">
+        <div class="flex items-center gap-3">
+          <i class="fas fa-search text-gray-400"></i>
+          <input type="text" placeholder="Search matches or teams..." 
+                 class="bg-transparent outline-none text-sm w-full">
+        </div>
+      </div>
+
+      <!-- Top Games -->
+      <div>
+        <h3 class="text-green-400 text-sm font-semibold mb-4 px-2">TOP GAMES</h3>
+        <div class="space-y-3">
+          <div class="bg-gradient-to-r from-red-600 to-orange-600 p-5 rounded-2xl card-hover cursor-pointer">
+            <div class="text-2xl font-bold tracking-wider">AVIATOR</div>
+          </div>
+          <div class="bg-gradient-to-r from-blue-600 to-cyan-600 p-5 rounded-2xl card-hover cursor-pointer">
+            <div class="text-2xl font-bold tracking-wider">JETX</div>
+          </div>
+          <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-5 rounded-2xl card-hover cursor-pointer">
+            <div class="text-2xl font-bold tracking-wider">NAVIGATOR</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Leagues -->
+      <div>
+        <h3 class="text-green-400 text-sm font-semibold mb-4 px-2">TOP LEAGUES</h3>
+        <div class="bg-[#1a2338] rounded-2xl p-4 text-sm space-y-3">
+          <div class="py-2 border-b border-gray-700">Premier League</div>
+          <div class="py-2 border-b border-gray-700">La Liga</div>
+          <div class="py-2 border-b border-gray-700">Serie A</div>
+          <div class="py-2">UEFA Champions League</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1">
+
+      <!-- Welcome Banners -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-gradient-to-r from-green-600 to-emerald-700 rounded-3xl p-6 flex items-center gap-4 card-hover">
+          <div>
+            <p class="text-sm opacity-90">Sports welcome bonus</p>
+            <p class="text-2xl font-bold">100% up to £50</p>
+            <p class="text-sm opacity-75">on first deposit</p>
+          </div>
+        </div>
+
+        <div class="bg-[#1a2338] rounded-3xl p-6 flex flex-col justify-center items-center text-center card-hover">
+          <div class="text-green-400 text-5xl mb-3">🔄</div>
+          <p class="font-semibold">Early Payout</p>
+          <p class="text-sm text-gray-400">on a 2-goal or 20-point lead</p>
+        </div>
+
+        <div class="bg-gradient-to-r from-green-600 to-emerald-700 rounded-3xl p-6 flex items-center gap-4 card-hover">
+          <div>
+            <p class="text-sm opacity-90">Sports welcome bonus</p>
+            <p class="text-2xl font-bold">100% up to £50</p>
+            <p class="text-sm opacity-75">on first deposit</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-700 mb-6">
+        <button onclick="switchTab(0)" id="tab0" class="tab-active px-8 py-4">Highlights</button>
+        <button onclick="switchTab(1)" id="tab1" class="px-8 py-4 text-gray-400 hover:text-white">Live</button>
+        <button onclick="switchTab(2)" id="tab2" class="px-8 py-4 text-gray-400 hover:text-white">Upcoming</button>
+      </div>
+
+      <!-- Soccer Section -->
+      <div>
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <i class="fas fa-futbol text-green-500 text-3xl"></i>
+            <h2 class="text-2xl font-bold">Soccer</h2>
+          </div>
+          <a href="#" class="text-green-400 flex items-center gap-1 text-sm hover:underline">
+            View All <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Matches Container -->
+        <div id="matches-container" class="space-y-5">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar - Betslip -->
+    <div class="w-80 hidden xl:block">
+      <div class="bg-[#1a2338] rounded-3xl p-6 sticky top-6">
+        <div class="flex border-b border-gray-700 pb-4 mb-6">
+          <button class="flex-1 py-3 font-semibold text-green-400 border-b-4 border-green-500">Betslip (0)</button>
+          <button class="flex-1 py-3 font-semibold text-gray-400">Jenga bets (0)</button>
+        </div>
+
+        <div class="text-center py-16 text-gray-500">
+          <i class="fas fa-receipt text-6xl mb-4 opacity-50"></i>
+          <p class="font-medium">Your betslip is empty</p>
+          <p class="text-xs mt-2">Click on any odds to start building your bet</p>
+        </div>
+
+        <div class="mt-10 bg-gray-900 rounded-2xl p-5 text-sm">
+          <div class="flex justify-between mb-3">
+            <span class="text-gray-400">Total Stake</span>
+            <span class="font-semibold">KES 0.00</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-gray-400">Potential Returns</span>
+            <span class="text-green-400 font-semibold">KES 0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sample matches (you can later replace with full games.json)
+    const matches = [
+      {
+        home: "Atletico Madrid",
+        away: "FC Barcelona",
+        time: "19:00",
+        date: "Apr 4",
+        league: "LaLiga",
+        odds: { one: "3.05", x: "3.70", two: "2.22" }
+      },
+      {
+        home: "Real Sociedad",
+        away: "Levante UD",
+        time: "12:00",
+        date: "Apr 4",
+        league: "LaLiga",
+        odds: { one: "1.61", x: "4.20", two: "5.20" }
+      },
+      {
+        home: "Real Madrid",
+        away: "Girona FC",
+        time: "19:00",
+        date: "Apr 10",
+        league: "LaLiga",
+        odds: { one: "1.22", x: "6.80", two: "10.00" }
+      },
+      {
+        home: "FC Barcelona",
+        away: "Atletico Madrid",
+        time: "19:00",
+        date: "Apr 8",
+        league: "Champions League",
+        odds: { one: "1.55", x: "4.70", two: "5.00" }
+      }
+    ];
+
+    function renderMatches() {
+      const container = document.getElementById('matches-container');
+      container.innerHTML = '';
+
+      matches.forEach(match => {
+        const div = document.createElement('div');
+        div.className = "bg-[#1a2338] rounded-3xl p-6 card-hover";
+        div.innerHTML = `
+          <div class="flex justify-between text-sm text-gray-400 mb-4">
+            <span>${match.league}</span>
+            <span>${match.date} • ${match.time}</span>
+          </div>
+          
+          <div class="flex justify-between items-center mb-6">
+            <div class="font-semibold text-lg">${match.home}</div>
+            <div class="text-gray-500 text-xs px-3">VS</div>
+            <div class="font-semibold text-lg text-right">${match.away}</div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3">
+            <button onclick="addToBetslip('${match.home} to win', '${match.odds.one}')" 
+                    class="bg-gray-900 hover:bg-green-600 hover:text-white transition py-4 rounded-2xl text-center">
+              <div class="text-xs text-gray-400">1</div>
+              <div class="font-bold text-lg">${match.odds.one}</div>
+            </button>
+            <button onclick="addToBetslip('Draw', '${match.odds.x}')" 
+                    class="bg-gray-900 hover:bg-green-600 hover:text-white transition py-4 rounded-2xl text-center">
+              <div class="text-xs text-gray-400">X</div>
+              <div class="font-bold text-lg">${match.odds.x}</div>
+            </button>
+            <button onclick="addToBetslip('${match.away} to win', '${match.odds.two}')" 
+                    class="bg-gray-900 hover:bg-green-600 hover:text-white transition py-4 rounded-2xl text-center">
+              <div class="text-xs text-gray-400">2</div>
+              <div class="font-bold text-lg">${match.odds.two}</div>
+            </button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function addToBetslip(selection, odd) {
+      alert(`Added to Betslip:\n${selection} @ ${odd}`);
+    }
+
+    function setActive(btn) {
+      document.querySelectorAll('button').forEach(b => b.classList.remove('nav-active'));
+      btn.classList.add('nav-active');
+    }
+
+    function switchTab(n) {
+      document.querySelectorAll('#tab0, #tab1, #tab2').forEach(btn => {
+        btn.classList.remove('tab-active');
+      });
+      document.getElementById(`tab${n}`).classList.add('tab-active');
+    }
+
+    // Initialize the page
+    window.onload = renderMatches;
+  </script>
+</body>
+</html>
